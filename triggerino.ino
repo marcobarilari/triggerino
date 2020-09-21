@@ -1,9 +1,7 @@
 #include "Keyboard.h"
 
-// 
-
 // select the pin where the is the led
-int ledPin = 10;
+int ledPin = 13;
 
 void setup() {
 
@@ -22,11 +20,14 @@ void loop() {
 
   // led ON
   digitalWrite(ledPin, HIGH); 
-
+  
   // wait for the TR time
-  delay(1800); //msec
+  delay(100); //msec
 
   // led OFF
   digitalWrite(ledPin, LOW); 
+
+  // wait for the TR time
+  delay(1600); //msec
 
 }
