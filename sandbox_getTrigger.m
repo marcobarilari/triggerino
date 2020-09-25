@@ -4,10 +4,10 @@
 % Example of usage: wait for n trigger inputs from the MRI (or 'triggerino') before starting your stimulation in a
 % fMRI experiment
 
-# Set the number if kb strokes to wait
+% Set the number if kb strokes to wait
 nbTriggersToWait = 5;
 
-# Set the kb stroker to listen to
+% Set the kb stroker to listen to
 cfg.mri.triggerKey = 't';
 
 % Don't echo keypresses to Matlab window
