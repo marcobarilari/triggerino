@@ -8,7 +8,12 @@
 nbTriggersToWait = 5;
 
 % Set the kb stroker to listen to
-cfg.mri.triggerKey = 't';
+triggerKey = 't';
+
+% Set the device number of the Arduino Leonardo using
+% [keyboardNumbers, keyboardNames] = GetKeyboardIndices
+
+deviceNumber = 6;
 
 % Don't echo keypresses to Matlab window
 ListenChar(-1);
@@ -20,10 +25,10 @@ while triggerCounter < nbTriggersToWait
     keyCode = []; %#ok<NASGU>
 
     % Check if a key is pressed
-    [~, keyCode] = KbPressWait(6);
+    [~, keyCode] = KbPressWait(deviceNumber);
 
     % If a key is pressed and is the target one then:
-    if strcmp(KbName(keyCode), cfg.mri.triggerKey)
+    if strcmp(KbName(keyCode), triggerKey)
 
         triggerCounter = triggerCounter + 1;
 
