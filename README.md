@@ -1,6 +1,10 @@
 # triggerino
 
-Arduino based mock trigger device to use for developing fMRI stimulation code (in case you need to sync your stimulation with the MRI triggers)
+Arduino based mock trigger device to use for developing fMRI stimulation code (in case you need to sync your stimulation with the MRI triggers).
+
+---
+
+Basic use: while the button is pressed, it will flash the led and send a letter (e.g., a 't') every x msec (e.g., 1800 msec) to the connected computer.
 
 ## Code
 
@@ -10,7 +14,7 @@ In `triggerino.ino` set the trigger key and the TR according to your need (see e
 // set trigger key
 char triggerKey = 't';
 
-// set TR
+// set TR in msec
 int TR = 1800;
 ```
 
@@ -21,6 +25,8 @@ int TR = 1800;
 Elements you need:
 
 - Arduino Leonardo (compared to the classic Arduino UNO, computers and Matlab see it as an external keyboard)
+
+- micro USB cable
 
 - breadboard
 

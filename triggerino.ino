@@ -3,7 +3,7 @@
 // set trigger key
 char triggerKey = 't';
 
-// set TR 
+// set TR in msec
 int TR = 1800;
 
 // select the pin where the is the led
@@ -48,10 +48,10 @@ void loop() {
   digitalWrite(ledPin, LOW);
 
   // wait for the TR time
-  delay(TR-50); //msec
+  delay(TR-50);
 
   } else {
-  
+
   // led ON
   digitalWrite(ledPin, HIGH);
 
