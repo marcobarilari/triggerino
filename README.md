@@ -30,7 +30,7 @@ Elements you need:
 
 - breadboard
 
-- 7 jumpers
+- 6 jumpers
 
 - 1 basic led
 
