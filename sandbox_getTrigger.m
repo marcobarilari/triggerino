@@ -1,7 +1,7 @@
 %% getTrigger
 %
 % Shows you how to use Psychtoolbox to wait for a specific keyboard input before doing something.
-% Example of usage: wait for n trigger inputs from the MRI before starting your stimulation in a
+% Example of usage: wait for n trigger inputs from the MRI (or 'triggerino') before starting your stimulation in a
 % fMRI experiment
 
 # Set the number if kb strokes to wait
