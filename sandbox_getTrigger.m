@@ -1,8 +1,13 @@
 %% getTrigger
 %
 % Shows you how to use Psychtoolbox to wait for a specific keyboard input before doing something.
-% Example of usage: wait for n trigger inputs from the MRI (or 'triggerino') before starting your stimulation in a
-% fMRI experiment
+% Example of usage: wait for n trigger inputs from 'triggerino' (or MRI) before starting your
+% stimulation in an fMRI experiment
+%
+% To find out which `deviceNumber` is assigned to the Arduino board, c/p this in the matlab/octave
+% command window (if empty, the main kb is default):
+%
+% [keyboardNumbers, keyboardNames] = GetKeyboardIndices
 
 % Set the number if kb strokes to wait
 nbTriggersToWait = 5;
@@ -10,10 +15,8 @@ nbTriggersToWait = 5;
 % Set the kb stroker to listen to
 triggerKey = 't';
 
-% Set the device number of the Arduino Leonardo using
-% [keyboardNumbers, keyboardNames] = GetKeyboardIndices
-
-deviceNumber = 6;
+% Set the device number of the Arduino Leonardo
+deviceNumber = [];
 
 % Don't echo keypresses to Matlab window
 ListenChar(-1);
@@ -37,7 +40,7 @@ while triggerCounter < nbTriggersToWait
 
         fprintf(msg)
         fprintf(newline)
-        
+
     end
 
 end
