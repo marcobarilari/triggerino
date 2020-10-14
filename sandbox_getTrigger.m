@@ -28,7 +28,7 @@ while triggerCounter < nbTriggersToWait
     keyCode = []; %#ok<NASGU>
 
     % Check if a key is pressed
-    [~, keyCode] = KbPressWait(deviceNumber);
+    [~, ~, keyCode] = KbCheck(deviceNumber);
 
     % If a key is pressed and is the target one then:
     if strcmp(KbName(keyCode), triggerKey)
